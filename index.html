@@ -27,6 +27,11 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+
+        .language-toggle-button.active {
+            background-color: #ea580c;
+            color: #fff;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans">
@@ -39,12 +44,16 @@
                 <span class="text-xs font-semibold text-slate-400 hidden sm:inline">LAS PIEDRAS</span>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#about" class="hover:text-accent transition">Why Us</a>
-                <a href="#fleet" class="hover:text-accent transition">Commercial Fleet</a>
-                <a href="#contact" class="hover:text-accent transition">Contact & Location</a>
+                <a href="#services" class="hover:text-accent transition" data-i18n="navServices">Services</a>
+                <a href="#about" class="hover:text-accent transition" data-i18n="navWhyUs">Why Us</a>
+                <a href="#fleet" class="hover:text-accent transition" data-i18n="navFleet">Commercial Fleet</a>
+                <a href="#contact" class="hover:text-accent transition" data-i18n="navContact">Contact & Location</a>
             </nav>
-            <div>
+            <div class="flex items-center gap-3">
+                <div class="flex items-center rounded-md border border-slate-700 bg-slate-800/80 p-1 text-xs font-semibold text-slate-200">
+                    <button type="button" class="language-toggle-button active rounded px-3 py-1 transition" data-language-toggle="en" aria-pressed="true">English</button>
+                    <button type="button" class="language-toggle-button rounded px-3 py-1 transition" data-language-toggle="es" aria-pressed="false">Español</button>
+                </div>
                 <a href="tel:7878503094" class="bg-accent hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition text-sm flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -62,45 +71,45 @@
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center space-x-2 bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">
                     <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    <span>Highly Specialized Drivetrain Care</span>
+                    <span data-i18n="heroBadge">Highly Specialized Drivetrain Care</span>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white" data-i18n="heroTitle">
                     Engineered to Handle the Drivetrain Stress of Puerto Rico
                 </h1>
-                <p class="text-lg text-slate-300 max-w-2xl">
+                <p class="text-lg text-slate-300 max-w-2xl" data-i18n="heroDescription">
                     The steep grades, heat, and humidity of Las Piedras demand more from your transmission. Don't settle for temporary quick-fixes. At Transmission Zone, we provide precision diagnostic and full rebuild services designed for long-term regional performance.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                    <a href="tel:7878503094" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-accent hover:bg-orange-600 transition">
+                    <a href="tel:7878503094" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-accent hover:bg-orange-600 transition" data-i18n="heroCall">
                         Call for Diagnostic Consultation
                     </a>
-                    <a href="https://www.google.com/maps/place/Transmission+Zone,+Las+Piedras/@18.1835048,-65.8770283,17z/data=!3m1!4b1!4m6!3m5!1s0x8c0359e5ad31bae3:0xb419e01885f012d2!8m2!3d18.1835048!4d-65.8744534!16s%2Fg%2F11gpnht4jb?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-200 bg-slate-800/80 hover:bg-slate-800 hover:text-white transition">
+                    <a href="https://www.google.com/maps/place/Transmission+Zone,+Las+Piedras/@18.1835048,-65.8770283,17z/data=!3m1!4b1!4m6!3m5!1s0x8c0359e5ad31bae3:0xb419e01885f012d2!8m2!3d18.1835048!4d-65.8744534!16s%2Fg%2F11gpnht4jb?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-200 bg-slate-800/80 hover:bg-slate-800 hover:text-white transition" data-i18n="heroDirections">
                         Get Directions (PR-9939)
                     </a>
                 </div>
             </div>
             <div class="lg:col-span-5 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl space-y-6">
-                <h3 class="text-xl font-bold text-white border-b border-slate-700 pb-3">Service Hours & Quick Info</h3>
+                <h3 class="text-xl font-bold text-white border-b border-slate-700 pb-3" data-i18n="heroHoursTitle">Service Hours & Quick Info</h3>
                 <ul class="space-y-3 text-slate-300 text-sm">
                     <li class="flex justify-between">
-                        <span class="font-semibold text-white">Monday - Friday:</span>
+                        <span class="font-semibold text-white" data-i18n="heroMonFriLabel">Monday - Friday:</span>
                         <span>7:00 AM – 5:00 PM</span>
                     </li>
                     <li class="flex justify-between">
-                        <span class="font-semibold text-white">Saturday:</span>
+                        <span class="font-semibold text-white" data-i18n="heroSaturdayLabel">Saturday:</span>
                         <span>8:00 AM – 12:00 PM</span>
                     </li>
                     <li class="flex justify-between text-slate-400">
-                        <span>Sunday:</span>
-                        <span>Closed</span>
+                        <span data-i18n="heroSundayLabel">Sunday:</span>
+                        <span data-i18n="heroClosed">Closed</span>
                     </li>
                 </ul>
                 <div class="bg-slate-900 p-4 rounded-lg border border-slate-700/50">
                     <div class="flex items-center space-x-3">
                         <div class="text-amber-500 font-bold text-2xl">4.6 ★</div>
                         <div class="text-xs text-slate-400">
-                            <p class="font-semibold text-slate-200">Verified Reputation</p>
-                            <p>Over 44+ customer reviews on Google Maps</p>
+                            <p class="font-semibold text-slate-200" data-i18n="heroReputationTitle">Verified Reputation</p>
+                            <p data-i18n="heroReputationBody">Over 44+ customer reviews on Google Maps</p>
                         </div>
                     </div>
                 </div>
@@ -111,8 +120,8 @@
     <!-- Core Specialties Section -->
     <section id="services" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Specialized Technical Capabilities</h2>
-            <p class="text-slate-600">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="servicesTitle">Our Specialized Technical Capabilities</h2>
+            <p class="text-slate-600" data-i18n="servicesDescription">
                 While standard auto repair centers focus on simple exterior parts replacements, our shop is built around advanced internal drivetrain components. We diagnose, calibrate, and rebuild.
             </p>
         </div>
@@ -121,8 +130,8 @@
             <!-- Specialty Card 1 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">01</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Complete Transmission Rebuilds</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard1Title">Complete Transmission Rebuilds</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard1Body">
                     Full internal tear-down and rebuilds of automatic and manual transmissions. We replace worn planetary gear sets, clutch packs, gaskets, and seals with extreme precision.
                 </p>
             </div>
@@ -130,8 +139,8 @@
             <!-- Specialty Card 2 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">02</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Hydraulic Valve Body Service</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard2Title">Hydraulic Valve Body Service</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard2Body">
                     A clean workbench environment is essential to clear delicate valve body channels. We calibrate pressure parameters to avoid delayed shifts and hydraulic line failures.
                 </p>
             </div>
@@ -139,8 +148,8 @@
             <!-- Specialty Card 3 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">03</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Advanced Diagnostics</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard3Title">Advanced Diagnostics</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard3Body">
                     We use specialized computer diagnostic scanning tools to read electrical solenoid blocks, identifying system fault codes accurately before beginning mechanical labor.
                 </p>
             </div>
@@ -148,8 +157,8 @@
             <!-- Specialty Card 4 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">04</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Torque Converter Refurbishment</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard4Title">Torque Converter Refurbishment</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard4Body">
                     Addressing slipping, shuddering, or complete lock-up failures with precision alignment tools to restore seamless power transition.
                 </p>
             </div>
@@ -157,8 +166,8 @@
             <!-- Specialty Card 5 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">05</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">FWD & RWD Drivetrains</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard5Title">FWD & RWD Drivetrains</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard5Body">
                     Versatility in handling transverse transaxles in modern passenger sedans as well as traditional longitudinal drivetrains on utility pickup trucks.
                 </p>
             </div>
@@ -166,8 +175,8 @@
             <!-- Specialty Card 6 -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
                 <div class="text-accent bg-orange-50 w-12 h-12 flex items-center justify-center rounded-lg mb-6 font-bold text-xl">06</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Solenoid & Electronic Repairs</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="serviceCard6Title">Solenoid & Electronic Repairs</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="serviceCard6Body">
                     Modern transmissions rely on electrical actuators. We replace faulty shift solenoids, wiring harnesses, and control sensors to bring shift patterns back to standard.
                 </p>
             </div>
@@ -179,34 +188,34 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Built on Specialized Expertise & Local Trust</h2>
-                    <p class="text-slate-300">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-i18n="aboutTitle">Built on Specialized Expertise & Local Trust</h2>
+                    <p class="text-slate-300" data-i18n-html="aboutBody1">
                         In Puerto Rico’s high-demand environment, vehicle owners require diagnostic accuracy, fair pricing, and clear transparency. Under the leadership of <strong>Jesús</strong>, our team has built a reputation for deep technical integrity.
                     </p>
-                    <p class="text-slate-300">
+                    <p class="text-slate-300" data-i18n="aboutBody2">
                         We maintain a highly clean, organized physical work environment designed specifically for drivetrain teardowns. Keeping microscopic debris away from your transmission fluid channels is our top operational standard.
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-4">
                         <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
                             <p class="text-3xl font-extrabold text-accent">4.6★</p>
-                            <p class="text-xs text-slate-400 mt-1">Average rating across verified local reviews</p>
+                            <p class="text-xs text-slate-400 mt-1" data-i18n="aboutRatingCaption">Average rating across verified local reviews</p>
                         </div>
                         <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
                             <p class="text-3xl font-extrabold text-accent">7:00 AM</p>
-                            <p class="text-xs text-slate-400 mt-1">Early morning weekday drop-off hours</p>
+                            <p class="text-xs text-slate-400 mt-1" data-i18n="aboutHoursCaption">Early morning weekday drop-off hours</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 space-y-6">
-                    <h3 class="text-xl font-bold border-b border-slate-700 pb-3 text-accent">What Our Customers Say</h3>
+                    <h3 class="text-xl font-bold border-b border-slate-700 pb-3 text-accent" data-i18n="aboutTestimonialsTitle">What Our Customers Say</h3>
                     <div class="space-y-6">
-                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300">
+                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300" data-i18n="quote1">
                             "Doy gracias a Dios y a Zona Transmisión por su profesionalismo y trabajo rápido."
                         </blockquote>
-                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300">
+                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300" data-i18n="quote2">
                             "Excelente servicio, han reparado mi transmisión por más de un año y ha funcionado a la perfección."
                         </blockquote>
-                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300">
+                        <blockquote class="border-l-2 border-accent pl-4 text-sm italic text-slate-300" data-i18n="quote3">
                             "El ayudante me indicó que después de resolver el problema eléctrico, atenderían mi asunto de cambios con rapidez."
                         </blockquote>
                     </div>
@@ -219,36 +228,36 @@
     <section id="fleet" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 sm:p-12 lg:grid lg:grid-cols-12 lg:gap-12 items-center">
             <div class="lg:col-span-7 space-y-6">
-                <span class="text-xs font-bold text-accent tracking-wider uppercase bg-orange-50 px-3 py-1 rounded-full">Commercial & Fleets</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Keep Your Light-Duty Work Trucks Operational</h2>
-                <p class="text-slate-600">
+                <span class="text-xs font-bold text-accent tracking-wider uppercase bg-orange-50 px-3 py-1 rounded-full" data-i18n="fleetBadge">Commercial & Fleets</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight" data-i18n="fleetTitle">Keep Your Light-Duty Work Trucks Operational</h2>
+                <p class="text-slate-600" data-i18n="fleetDescription">
                     We understand that downtime directly impacts revenue for local contractors, agricultural, and commercial business operators. That is why we specialize in heavy-duty longitudinal transmissions for popular local utility models:
                 </p>
                 <div class="grid grid-cols-2 gap-4 text-sm font-semibold text-slate-800">
                     <div class="flex items-center space-x-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        <span>Ford Ranger Platforms</span>
+                        <span data-i18n="fleetItem1">Ford Ranger Platforms</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        <span>Toyota Tacoma Series</span>
+                        <span data-i18n="fleetItem2">Toyota Tacoma Series</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        <span>Heavy-Duty Longitudinal Trans</span>
+                        <span data-i18n="fleetItem3">Heavy-Duty Longitudinal Trans</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                        <span>Commercial Fleet Drop-off</span>
+                        <span data-i18n="fleetItem4">Commercial Fleet Drop-off</span>
                     </div>
                 </div>
             </div>
             <div class="lg:col-span-5 mt-8 lg:mt-0 bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-4">
-                <h4 class="font-bold text-slate-900">Why fleet managers trust us:</h4>
-                <p class="text-xs text-slate-600 leading-relaxed">
+                <h4 class="font-bold text-slate-900" data-i18n="fleetTrustTitle">Why fleet managers trust us:</h4>
+                <p class="text-xs text-slate-600 leading-relaxed" data-i18n="fleetTrustBody">
                     Our high-capacity physical vehicle lifts and specialized tooling let us handle commercial vehicles safely and efficiently, reducing the time your trucks sit idle in the repair bay.
                 </p>
-                <a href="tel:7878503094" class="block text-center w-full bg-slate-900 text-white font-bold py-3 px-4 rounded hover:bg-slate-800 transition text-sm">
+                <a href="tel:7878503094" class="block text-center w-full bg-slate-900 text-white font-bold py-3 px-4 rounded hover:bg-slate-800 transition text-sm" data-i18n="fleetCta">
                     Inquire About Fleet Timelines
                 </a>
             </div>
@@ -259,8 +268,8 @@
     <section id="contact" class="bg-slate-100 py-16 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div class="space-y-6">
-                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Contact & Location Details</h2>
-                <p class="text-slate-600">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight" data-i18n="contactTitle">Contact & Location Details</h2>
+                <p class="text-slate-600" data-i18n-html="contactDescription">
                     We are located along the highly accessible <strong>PR-9939</strong> corridor in Las Piedras, designed with accessible facility layouts.
                 </p>
 
@@ -271,9 +280,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <div>
-                            <p class="font-bold text-slate-900">Address</p>
-                            <p>54MG+C63, PR-9939, Las Piedras, Puerto Rico</p>
-                            <p class="text-xs text-slate-500 mt-0.5">(Desvío Francisco Maldonado)</p>
+                            <p class="font-bold text-slate-900" data-i18n="addressLabel">Address</p>
+                            <p data-i18n="addressValue">54MG+C63, PR-9939, Las Piedras, Puerto Rico</p>
+                            <p class="text-xs text-slate-500 mt-0.5" data-i18n="addressNote">(Desvío Francisco Maldonado)</p>
                         </div>
                     </div>
 
@@ -282,7 +291,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <div>
-                            <p class="font-bold text-slate-900">Telephone</p>
+                            <p class="font-bold text-slate-900" data-i18n="telephoneLabel">Telephone</p>
                             <a href="tel:7878503094" class="text-blue-600 hover:underline font-semibold">(787) 850-3094</a>
                         </div>
                     </div>
@@ -292,10 +301,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>
-                            <p class="font-bold text-slate-900">Weekly Schedule</p>
-                            <p>Mon - Fri: 7:00 AM – 5:00 PM</p>
-                            <p>Saturday: 8:00 AM – 12:00 PM</p>
-                            <p class="text-slate-500">Sunday: Closed</p>
+                            <p class="font-bold text-slate-900" data-i18n="scheduleLabel">Weekly Schedule</p>
+                            <p data-i18n="scheduleMonFri">Mon - Fri: 7:00 AM – 5:00 PM</p>
+                            <p data-i18n="scheduleSaturday">Saturday: 8:00 AM – 12:00 PM</p>
+                            <p class="text-slate-500" data-i18n="scheduleSunday">Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
@@ -308,9 +317,9 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent mb-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                     </svg>
-                    <h3 class="text-lg font-bold">Find Us on Google Maps</h3>
-                    <p class="text-slate-300 text-xs mt-2 max-w-sm mb-6">Located directly off the PR-9939 highway, our facility has highly accessible ground pathways and parking.</p>
-                    <a href="https://www.google.com/maps/place/Transmission+Zone,+Las+Piedras/@18.1835048,-65.8770283,17z/data=!3m1!4b1!4m6!3m5!1s0x8c0359e5ad31bae3:0xb419e01885f012d2!8m2!3d18.1835048!4d-65.8744534!16s%2Fg%2F11gpnht4jb?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md text-sm transition">
+                    <h3 class="text-lg font-bold" data-i18n="mapTitle">Find Us on Google Maps</h3>
+                    <p class="text-slate-300 text-xs mt-2 max-w-sm mb-6" data-i18n="mapDescription">Located directly off the PR-9939 highway, our facility has highly accessible ground pathways and parking.</p>
+                    <a href="https://www.google.com/maps/place/Transmission+Zone,+Las+Piedras/@18.1835048,-65.8770283,17z/data=!3m1!4b1!4m6!3m5!1s0x8c0359e5ad31bae3:0xb419e01885f012d2!8m2!3d18.1835048!4d-65.8744534!16s%2Fg%2F11gpnht4jb?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md text-sm transition" data-i18n="mapCta">
                         Open Navigation & Directions
                     </a>
                 </div>
@@ -321,14 +330,196 @@
     <!-- Simple, Clean Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p>&copy; 2026 Transmission Zone. All rights reserved. Las Piedras, Puerto Rico.</p>
+            <p data-i18n="footerCopyright">&copy; 2026 Transmission Zone. All rights reserved. Las Piedras, Puerto Rico.</p>
             <div class="flex space-x-6">
-                <span class="hover:text-white transition">Quality Drivetrain Care</span>
+                <span class="hover:text-white transition" data-i18n="footerTag1">Quality Drivetrain Care</span>
                 <span>•</span>
-                <span class="hover:text-white transition">Accurate Diagnostics</span>
+                <span class="hover:text-white transition" data-i18n="footerTag2">Accurate Diagnostics</span>
             </div>
         </div>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                metaTitle: 'Transmission Zone | Expert Transmission Rebuilds in Las Piedras, PR',
+                navServices: 'Services',
+                navWhyUs: 'Why Us',
+                navFleet: 'Commercial Fleet',
+                navContact: 'Contact & Location',
+                heroBadge: 'Highly Specialized Drivetrain Care',
+                heroTitle: 'Engineered to Handle the Drivetrain Stress of Puerto Rico',
+                heroDescription: "The steep grades, heat, and humidity of Las Piedras demand more from your transmission. Don't settle for temporary quick-fixes. At Transmission Zone, we provide precision diagnostic and full rebuild services designed for long-term regional performance.",
+                heroCall: 'Call for Diagnostic Consultation',
+                heroDirections: 'Get Directions (PR-9939)',
+                heroHoursTitle: 'Service Hours & Quick Info',
+                heroMonFriLabel: 'Monday - Friday:',
+                heroSaturdayLabel: 'Saturday:',
+                heroSundayLabel: 'Sunday:',
+                heroClosed: 'Closed',
+                heroReputationTitle: 'Verified Reputation',
+                heroReputationBody: 'Over 44+ customer reviews on Google Maps',
+                servicesTitle: 'Our Specialized Technical Capabilities',
+                servicesDescription: 'While standard auto repair centers focus on simple exterior parts replacements, our shop is built around advanced internal drivetrain components. We diagnose, calibrate, and rebuild.',
+                serviceCard1Title: 'Complete Transmission Rebuilds',
+                serviceCard1Body: 'Full internal tear-down and rebuilds of automatic and manual transmissions. We replace worn planetary gear sets, clutch packs, gaskets, and seals with extreme precision.',
+                serviceCard2Title: 'Hydraulic Valve Body Service',
+                serviceCard2Body: 'A clean workbench environment is essential to clear delicate valve body channels. We calibrate pressure parameters to avoid delayed shifts and hydraulic line failures.',
+                serviceCard3Title: 'Advanced Diagnostics',
+                serviceCard3Body: 'We use specialized computer diagnostic scanning tools to read electrical solenoid blocks, identifying system fault codes accurately before beginning mechanical labor.',
+                serviceCard4Title: 'Torque Converter Refurbishment',
+                serviceCard4Body: 'Addressing slipping, shuddering, or complete lock-up failures with precision alignment tools to restore seamless power transition.',
+                serviceCard5Title: 'FWD & RWD Drivetrains',
+                serviceCard5Body: 'Versatility in handling transverse transaxles in modern passenger sedans as well as traditional longitudinal drivetrains on utility pickup trucks.',
+                serviceCard6Title: 'Solenoid & Electronic Repairs',
+                serviceCard6Body: 'Modern transmissions rely on electrical actuators. We replace faulty shift solenoids, wiring harnesses, and control sensors to bring shift patterns back to standard.',
+                aboutTitle: 'Built on Specialized Expertise & Local Trust',
+                aboutBody1: 'In Puerto Rico’s high-demand environment, vehicle owners require diagnostic accuracy, fair pricing, and clear transparency. Under the leadership of <strong>Jesús</strong>, our team has built a reputation for deep technical integrity.',
+                aboutBody2: 'We maintain a highly clean, organized physical work environment designed specifically for drivetrain teardowns. Keeping microscopic debris away from your transmission fluid channels is our top operational standard.',
+                aboutRatingCaption: 'Average rating across verified local reviews',
+                aboutHoursCaption: 'Early morning weekday drop-off hours',
+                aboutTestimonialsTitle: 'What Our Customers Say',
+                quote1: '"I thank God and Transmission Zone for their professionalism and fast work."',
+                quote2: '"Excellent service. They repaired my transmission more than a year ago and it has worked perfectly ever since."',
+                quote3: '"The assistant told me that after solving the electrical problem, they would handle my shifting issue quickly."',
+                fleetBadge: 'Commercial & Fleets',
+                fleetTitle: 'Keep Your Light-Duty Work Trucks Operational',
+                fleetDescription: 'We understand that downtime directly impacts revenue for local contractors, agricultural, and commercial business operators. That is why we specialize in heavy-duty longitudinal transmissions for popular local utility models:',
+                fleetItem1: 'Ford Ranger Platforms',
+                fleetItem2: 'Toyota Tacoma Series',
+                fleetItem3: 'Heavy-Duty Longitudinal Trans',
+                fleetItem4: 'Commercial Fleet Drop-off',
+                fleetTrustTitle: 'Why fleet managers trust us:',
+                fleetTrustBody: 'Our high-capacity physical vehicle lifts and specialized tooling let us handle commercial vehicles safely and efficiently, reducing the time your trucks sit idle in the repair bay.',
+                fleetCta: 'Inquire About Fleet Timelines',
+                contactTitle: 'Contact & Location Details',
+                contactDescription: 'We are located along the highly accessible <strong>PR-9939</strong> corridor in Las Piedras, designed with accessible facility layouts.',
+                addressLabel: 'Address',
+                addressValue: '54MG+C63, PR-9939, Las Piedras, Puerto Rico',
+                addressNote: '(Desvío Francisco Maldonado)',
+                telephoneLabel: 'Telephone',
+                scheduleLabel: 'Weekly Schedule',
+                scheduleMonFri: 'Mon - Fri: 7:00 AM – 5:00 PM',
+                scheduleSaturday: 'Saturday: 8:00 AM – 12:00 PM',
+                scheduleSunday: 'Sunday: Closed',
+                mapTitle: 'Find Us on Google Maps',
+                mapDescription: 'Located directly off the PR-9939 highway, our facility has highly accessible ground pathways and parking.',
+                mapCta: 'Open Navigation & Directions',
+                footerCopyright: '© 2026 Transmission Zone. All rights reserved. Las Piedras, Puerto Rico.',
+                footerTag1: 'Quality Drivetrain Care',
+                footerTag2: 'Accurate Diagnostics'
+            },
+            es: {
+                metaTitle: 'Transmission Zone | Reconstrucción experta de transmisiones en Las Piedras, PR',
+                navServices: 'Servicios',
+                navWhyUs: 'Por qué nosotros',
+                navFleet: 'Flotas comerciales',
+                navContact: 'Contacto y ubicación',
+                heroBadge: 'Cuidado altamente especializado del tren motriz',
+                heroTitle: 'Preparados para soportar el esfuerzo del tren motriz en Puerto Rico',
+                heroDescription: 'Las cuestas pronunciadas, el calor y la humedad de Las Piedras exigen más de su transmisión. No se conforme con arreglos temporeros. En Transmission Zone ofrecemos diagnóstico de precisión y reconstrucciones completas diseñadas para rendimiento duradero en nuestra región.',
+                heroCall: 'Llame para una consulta diagnóstica',
+                heroDirections: 'Cómo llegar (PR-9939)',
+                heroHoursTitle: 'Horario y datos rápidos',
+                heroMonFriLabel: 'Lunes a viernes:',
+                heroSaturdayLabel: 'Sábado:',
+                heroSundayLabel: 'Domingo:',
+                heroClosed: 'Cerrado',
+                heroReputationTitle: 'Reputación verificada',
+                heroReputationBody: 'Más de 44 reseñas de clientes en Google Maps',
+                servicesTitle: 'Nuestras capacidades técnicas especializadas',
+                servicesDescription: 'Mientras muchos talleres se concentran en reemplazos sencillos de piezas exteriores, nuestro taller está enfocado en componentes internos avanzados del tren motriz. Diagnosticamos, calibramos y reconstruimos.',
+                serviceCard1Title: 'Reconstrucciones completas de transmisión',
+                serviceCard1Body: 'Desarmamos y reconstruimos por completo transmisiones automáticas y manuales. Reemplazamos conjuntos planetarios desgastados, paquetes de clutch, empaques y sellos con alta precisión.',
+                serviceCard2Title: 'Servicio del cuerpo de válvulas hidráulico',
+                serviceCard2Body: 'Un banco de trabajo limpio es esencial para despejar los delicados conductos del cuerpo de válvulas. Calibramos la presión para evitar cambios tardíos y fallas en las líneas hidráulicas.',
+                serviceCard3Title: 'Diagnóstico avanzado',
+                serviceCard3Body: 'Utilizamos herramientas computarizadas especializadas para leer los bloques de solenoides eléctricos e identificar códigos de falla con precisión antes de comenzar la reparación mecánica.',
+                serviceCard4Title: 'Reacondicionamiento de convertidor de torque',
+                serviceCard4Body: 'Atendemos patinaje, vibración o bloqueos completos con herramientas de alineación de precisión para restablecer una transferencia de potencia suave.',
+                serviceCard5Title: 'Trenes motrices FWD y RWD',
+                serviceCard5Body: 'Trabajamos tanto con transejes transversales de sedanes modernos como con trenes motrices longitudinales tradicionales en pick-ups y vehículos utilitarios.',
+                serviceCard6Title: 'Reparaciones de solenoides y sistemas electrónicos',
+                serviceCard6Body: 'Las transmisiones modernas dependen de actuadores eléctricos. Reemplazamos solenoides defectuosos, arneses y sensores para recuperar patrones de cambio normales.',
+                aboutTitle: 'Respaldados por experiencia especializada y confianza local',
+                aboutBody1: 'En el entorno exigente de Puerto Rico, los dueños de vehículos necesitan diagnósticos precisos, precios justos y transparencia clara. Bajo el liderazgo de <strong>Jesús</strong>, nuestro equipo ha construido una reputación de integridad técnica profunda.',
+                aboutBody2: 'Mantenemos un espacio de trabajo limpio y organizado, diseñado específicamente para desarmes de tren motriz. Evitar residuos microscópicos en los canales del fluido de transmisión es una prioridad operacional.',
+                aboutRatingCaption: 'Calificación promedio en reseñas locales verificadas',
+                aboutHoursCaption: 'Horario temprano para entrega entre semana',
+                aboutTestimonialsTitle: 'Lo que dicen nuestros clientes',
+                quote1: '"Doy gracias a Dios y a Zona Transmisión por su profesionalismo y trabajo rápido."',
+                quote2: '"Excelente servicio, han reparado mi transmisión por más de un año y ha funcionado a la perfección."',
+                quote3: '"El ayudante me indicó que después de resolver el problema eléctrico, atenderían mi asunto de cambios con rapidez."',
+                fleetBadge: 'Comercial y flotas',
+                fleetTitle: 'Mantenga operando sus camiones livianos de trabajo',
+                fleetDescription: 'Entendemos que el tiempo fuera de servicio afecta directamente los ingresos de contratistas, agricultores y operadores comerciales. Por eso nos especializamos en transmisiones longitudinales de alta exigencia para modelos utilitarios populares en la zona:',
+                fleetItem1: 'Plataformas Ford Ranger',
+                fleetItem2: 'Serie Toyota Tacoma',
+                fleetItem3: 'Transmisiones longitudinales de trabajo pesado',
+                fleetItem4: 'Entrega para flotas comerciales',
+                fleetTrustTitle: 'Por qué las flotas confían en nosotros:',
+                fleetTrustBody: 'Nuestros elevadores de alta capacidad y herramientas especializadas nos permiten atender vehículos comerciales de forma segura y eficiente, reduciendo el tiempo que sus unidades permanecen inactivas.',
+                fleetCta: 'Consulte tiempos para flotas',
+                contactTitle: 'Contacto y detalles de ubicación',
+                contactDescription: 'Estamos ubicados en el accesible corredor <strong>PR-9939</strong> en Las Piedras, con instalaciones diseñadas para un acceso cómodo.',
+                addressLabel: 'Dirección',
+                addressValue: '54MG+C63, PR-9939, Las Piedras, Puerto Rico',
+                addressNote: '(Desvío Francisco Maldonado)',
+                telephoneLabel: 'Teléfono',
+                scheduleLabel: 'Horario semanal',
+                scheduleMonFri: 'Lun - Vie: 7:00 AM – 5:00 PM',
+                scheduleSaturday: 'Sábado: 8:00 AM – 12:00 PM',
+                scheduleSunday: 'Domingo: Cerrado',
+                mapTitle: 'Encuéntrenos en Google Maps',
+                mapDescription: 'Ubicados directamente en la PR-9939, con acceso cómodo para peatones y estacionamiento.',
+                mapCta: 'Abrir navegación y direcciones',
+                footerCopyright: '© 2026 Transmission Zone. Todos los derechos reservados. Las Piedras, Puerto Rico.',
+                footerTag1: 'Cuidado de calidad para el tren motriz',
+                footerTag2: 'Diagnósticos precisos'
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('[data-language-toggle]');
+
+        function applyLanguage(language) {
+            const selectedLanguage = translations[language] ? language : 'en';
+            const messages = translations[selectedLanguage];
+
+            document.documentElement.lang = selectedLanguage;
+            document.title = messages.metaTitle;
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+                if (messages[key]) {
+                    element.textContent = messages[key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+                const key = element.dataset.i18nHtml;
+                if (messages[key]) {
+                    element.innerHTML = messages[key];
+                }
+            });
+
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.languageToggle === selectedLanguage;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            window.localStorage.setItem('preferredLanguage', selectedLanguage);
+        }
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => applyLanguage(button.dataset.languageToggle));
+        });
+
+        const savedLanguage = window.localStorage.getItem('preferredLanguage');
+        const browserLanguage = navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
+
+        applyLanguage(savedLanguage || browserLanguage);
+    </script>
 
 </body>
 </html>
